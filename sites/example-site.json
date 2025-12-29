@@ -1,0 +1,16 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "FreeCodeCamp",
+  "url": "https://www.freecodecamp.org",
+  "type": "learning",
+  "description": "All of free programming course site.",
+  "introducer": {
+    "github": "@chi1180"
+  },
+  "links": {
+    "github": "https://example.com"
+  },
+  "pricing": "free",
+  "style": "project-based",
+  "topics": ["web"]
+}

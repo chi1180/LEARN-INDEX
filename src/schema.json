@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "name",
+    "url",
+    "type",
+    "description",
+    "topics",
+    "style",
+    "pricing"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "JSON Schema reference"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the learning resource"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The official URL of the resource"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["learning", "reference", "tutorial", "course", "documentation"],
+      "description": "The type of resource"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 300,
+      "description": "A brief description of the resource"
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Topics covered by this resource"
+    },
+    "style": {
+      "type": "string",
+      "enum": ["interactive", "video", "reading", "project-based", "mixed"],
+      "description": "The primary learning style of the resource"
+    },
+    "pricing": {
+      "type": "string",
+      "enum": ["free", "freemium", "paid", "subscription"],
+      "description": "The pricing model of the resource"
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "article": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to a related article"
+        },
+        "github": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to the GitHub repository"
+        },
+        "documentation": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to documentation"
+        }
+      },
+      "additionalProperties": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "Related links"
+    },
+    "introducer": {
+      "type": "object",
+      "properties": {
+        "github": {
+          "type": "string",
+          "description": "GitHub username of the person who introduced this resource\ne.g., @chi1180"
+        },
+        "x": {
+          "type": "string",
+          "description": "Twitter handle of the introducer"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Information about who introduced this resource"
+    }
+  },
+  "additionalProperties": false
+}

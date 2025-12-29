@@ -1,0 +1,21 @@
+{
+  "name": "nocostlearning",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "bun run src/test.ts",
+    "sync": "bun run src/data-sync.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@notionhq/client": "^5.6.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}
