@@ -1,4 +1,5 @@
 import { Client } from "@notionhq/client";
+import type { CreatePageParameters } from "@notionhq/client/build/src/api-endpoints";
 import { readdir } from "node:fs/promises";
 import { join, basename } from "node:path";
 
@@ -28,12 +29,14 @@ const notion = new Client({
   auth: process.env.NOTION_API_KEY,
 });
 
-const DATABASE_ID = process.env.NOTION_DATABASE_ID;
+const DATABASE_ID_ENV = process.env.NOTION_DATABASE_ID;
 
-if (!DATABASE_ID) {
+if (!DATABASE_ID_ENV) {
   console.error("❌ NOTION_DATABASE_ID environment variable is required");
   process.exit(1);
 }
+
+const DATABASE_ID: string = DATABASE_ID_ENV;
 
 async function getAllJsonFiles(dir: string): Promise<string[]> {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -64,16 +67,22 @@ async function getExistingPages(): Promise<Map<string, string>> {
   let startCursor: string | undefined;
 
   while (hasMore) {
-    const response = await notion.databases.query({
-      database_id: DATABASE_ID!,
+    const response = await notion.dataSources.query({
+      data_source_id: DATABASE_ID,
       start_cursor: startCursor,
     });
 
     for (const page of response.results) {
       if ("properties" in page) {
         const nameProperty = page.properties["Name"];
-        if (nameProperty?.type === "title" && nameProperty.title.length > 0) {
-          const name = nameProperty.title[0].plain_text;
+        if (
+          nameProperty?.type === "title" &&
+          Array.isArray(nameProperty.title) &&
+          nameProperty.title.length > 0
+        ) {
+          const firstTitle = nameProperty.title[0];
+          if (!firstTitle) continue;
+          const name = firstTitle.plain_text;
           existingPages.set(name, page.id);
         }
       }
@@ -86,8 +95,10 @@ async function getExistingPages(): Promise<Map<string, string>> {
   return existingPages;
 }
 
-function buildNotionProperties(resource: LearningResource) {
-  const properties: Record<string, unknown> = {
+type PageProperties = CreatePageParameters["properties"];
+
+function buildNotionProperties(resource: LearningResource): PageProperties {
+  const properties: PageProperties = {
     Name: {
       title: [{ text: { content: resource.name } }],
     },
@@ -142,7 +153,7 @@ function buildNotionProperties(resource: LearningResource) {
 
 async function createPage(resource: LearningResource): Promise<void> {
   await notion.pages.create({
-    parent: { database_id: DATABASE_ID! },
+    parent: { database_id: DATABASE_ID },
     properties: buildNotionProperties(resource),
   });
 }

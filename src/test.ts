@@ -80,7 +80,9 @@ async function runTests(): Promise<void> {
       passCount++;
     } else {
       console.log(`❌ ${relativePath}`);
-      result.errors?.forEach((err) => console.log(err));
+      for (const err of result.errors ?? []) {
+        console.log(err);
+      }
       failCount++;
     }
   }
