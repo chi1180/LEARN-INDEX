@@ -15,11 +15,6 @@ async function syncToNotion(): Promise<void> {
   const sitesDir = join(import.meta.dir, "../sites");
   const jsonFiles = await getAllJsonFiles(sitesDir);
 
-  if (jsonFiles.length === 0) {
-    console.log("⚠️  No JSON files found in sites directory");
-    return;
-  }
-
   console.log(`📁 Found ${jsonFiles.length} resource file(s)`);
   console.log("📡 Fetching existing pages from Notion...\n");
 
@@ -32,7 +27,26 @@ async function syncToNotion(): Promise<void> {
   let errors = 0;
 
   const DIFFS = await getGitDiff();
+  console.log("📝 Git diff result:", DIFFS);
 
+  // 1. 削除されたファイルを先に処理（jsonFilesには含まれないため）
+  for (const deletedName of DIFFS.deleted) {
+    try {
+      const existingPageId = existingPages.get(deletedName);
+      if (existingPageId) {
+        await deletePage(existingPageId);
+        console.log(`🗑️ Deleted: ${deletedName}`);
+        deleted++;
+      } else {
+        console.log(`⚠️ Page not found for deletion: ${deletedName}`);
+      }
+    } catch (error) {
+      console.error(`❌ Error deleting ${deletedName}:`, error);
+      errors++;
+    }
+  }
+
+  // 2. 追加・更新されたファイルを処理
   for (const filePath of jsonFiles) {
     const fileName = basename(filePath);
 
@@ -40,32 +54,18 @@ async function syncToNotion(): Promise<void> {
       const resource = await loadResource(filePath);
       const existingPageId = existingPages.get(resource.name);
 
-      if (existingPageId) {
-        // Check if the resource was modified
-        if (DIFFS.modified.includes(resource.name)) {
-          await updatePage(existingPageId, resource);
-          console.log(`🔄 Updated: ${resource.name}`);
-          updated++;
-        } else if (DIFFS.deleted.includes(resource.name)) {
-          await deletePage(existingPageId);
-          console.log(`🗑️ Deleted: ${resource.name}`);
-          deleted++;
-        }
-      } else if (DIFFS.added.includes(resource.name)) {
+      if (DIFFS.added.includes(resource.name)) {
+        // 新規追加
         await createPage(resource);
         console.log(`✨ Created: ${resource.name}`);
         created++;
-      } else {
-        console.log("Unexpected state found !");
-        console.dir(
-          {
-            resource: resource,
-            existingPageId: existingPageId,
-            diffs: DIFFS,
-          },
-          { dipth: null },
-        );
+      } else if (DIFFS.modified.includes(resource.name) && existingPageId) {
+        // 更新
+        await updatePage(existingPageId, resource);
+        console.log(`🔄 Updated: ${resource.name}`);
+        updated++;
       }
+      // DIFFSに含まれないファイルは変更なしなのでスキップ
     } catch (error) {
       console.error(`❌ Error processing ${fileName}:`, error);
       errors++;

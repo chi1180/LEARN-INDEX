@@ -29,3 +29,12 @@ export interface DatabaseQueryResponse {
   next_cursor: string | null;
   has_more: boolean;
 }
+
+/**
+ * List of site name
+ */
+export interface DiffResult {
+  added: string[];
+  deleted: string[];
+  modified: string[];
+}

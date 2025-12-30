@@ -2,7 +2,7 @@ import { Client } from "@notionhq/client";
 import type { CreatePageParameters } from "@notionhq/client/build/src/api-endpoints";
 import { readdir } from "node:fs/promises";
 import { join } from "node:path";
-import type { LearningResource, DatabaseQueryResponse } from "./typse";
+import type { LearningResource, DatabaseQueryResponse } from "./types";
 
 // Initialize Notion client
 const notion = new Client({

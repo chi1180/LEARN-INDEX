@@ -1,16 +1,8 @@
 import { exec } from "child_process";
 import { promisify } from "util";
+import type { DiffResult } from "./types";
 
 const execAsync = promisify(exec);
-
-/**
- * List of site name
- */
-interface DiffResult {
-  added: string[];
-  deleted: string[];
-  modified: string[];
-}
 
 export async function getGitDiff(): Promise<DiffResult> {
   const diffCommand = "git diff --name-status HEAD^ HEAD";
@@ -30,16 +22,27 @@ export async function getGitDiff(): Promise<DiffResult> {
       filePath.startsWith("sites/") &&
       filePath.endsWith(".json")
     ) {
-      const content = await getFileContent(filePath);
-      const parsedContent = JSON.parse(content);
-      const name = parsedContent.name;
+      try {
+        let content: string;
 
-      if (status === "A") {
-        added.push(name);
-      } else if (status === "D") {
-        deleted.push(name);
-      } else if (status === "M") {
-        modified.push(name);
+        if (status === "A") {
+          // Get added file content from HEAD
+          content = await getFileContentFromHead(filePath);
+          const parsedContent = JSON.parse(content);
+          added.push(parsedContent.name);
+        } else if (status === "D") {
+          // Deleted file content from previous HEAD
+          content = await getFileContentFromPreviousHead(filePath);
+          const parsedContent = JSON.parse(content);
+          deleted.push(parsedContent.name);
+        } else if (status === "M") {
+          // Modified file content from HEAD
+          content = await getFileContentFromHead(filePath);
+          const parsedContent = JSON.parse(content);
+          modified.push(parsedContent.name);
+        }
+      } catch (error) {
+        console.error(`Error processing file: ${filePath}`, error);
       }
     }
   }
@@ -47,16 +50,16 @@ export async function getGitDiff(): Promise<DiffResult> {
   return { added, deleted, modified };
 }
 
-async function getFileContent(filePath: string): Promise<string> {
-  try {
-    const showCommand = `git show HEAD^:${filePath}`;
-    const { stdout } = await execAsync(showCommand);
-    return stdout;
-  } catch (error) {
-    console.error(
-      `Error retrieving content for deleted file: ${filePath}`,
-      error,
-    );
-    return "";
-  }
+async function getFileContentFromHead(filePath: string): Promise<string> {
+  const showCommand = `git show HEAD:${filePath}`;
+  const { stdout } = await execAsync(showCommand);
+  return stdout;
+}
+
+async function getFileContentFromPreviousHead(
+  filePath: string,
+): Promise<string> {
+  const showCommand = `git show HEAD^:${filePath}`;
+  const { stdout } = await execAsync(showCommand);
+  return stdout;
 }
