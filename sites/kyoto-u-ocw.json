@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "京都大学 OCW",
+  "url": "https://ocw.kyoto-u.ac.jp/",
+  "type": "course",
+  "description": "京都大学のOpenCourseWare。情報分散アルゴリズムをはじめ、京都大学のいろいろな講義が無料で視聴可能。",
+  "topics": ["Computer Science", "Information Technology", "Algorithm"],
+  "style": "video",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

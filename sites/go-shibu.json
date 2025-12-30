@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Go言語ドキュメント",
+  "url": "http://go.shibu.jp/",
+  "type": "documentation",
+  "description": "Go言語の日本語ドキュメント。必要な知識をほぼすべて学ぶことができる包括的なリファレンス。",
+  "topics": ["Go", "Golang"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

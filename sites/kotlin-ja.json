@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Kotlin 日本語リファレンス",
+  "url": "https://karino2.github.io/kotlin-web-site-ja/",
+  "type": "documentation",
+  "description": "Kotlinの言語リファレンスの和訳サイト。公式ドキュメントを日本語で読むことができ、Kotlin学習者にとって非常にありがたいリソース。",
+  "topics": ["Kotlin", "Android", "JVM"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

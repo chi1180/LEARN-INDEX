@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "The Swift Programming Language",
+  "url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/",
+  "type": "documentation",
+  "description": "Swiftの公式ドキュメント。言語のほぼすべての情報が網羅されている。英語のみだが、Swift開発に必要な知識を体系的に学べる。",
+  "topics": ["Swift", "iOS", "macOS", "Apple"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Wokwi",
+  "url": "https://wokwi.com/",
+  "type": "learning",
+  "description": "Arduino、ESP32、STM32、Pi Picoなどのマイコンをブラウザ上でシミュレートできるWebサービス。ボードを組み立ててプログラムを実行でき、ハードウェアがなくても学習可能。ハーバード大学でも使用されている。",
+  "topics": ["Arduino", "ESP32", "STM32", "Raspberry Pi Pico", "IoT", "Embedded Systems"],
+  "style": "interactive",
+  "pricing": "freemium",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

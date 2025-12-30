@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "ゼロから学ぶ C++",
+  "url": "https://rinatz.github.io/cpp-book/",
+  "type": "tutorial",
+  "description": "C++をゼロから段階を踏んで学べる日本語チュートリアルサイト。王道の言語を基礎から体系的に習得できます。",
+  "topics": ["C++", "Programming"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

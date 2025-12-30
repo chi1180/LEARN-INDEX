@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "サバイバルTypeScript",
+  "url": "https://typescriptbook.jp/",
+  "type": "tutorial",
+  "description": "TypeScriptを実践的に学べる日本語チュートリアルサイト。他のサイトと併用しながら、やる気があるときに一気に進める学習方法がおすすめ。",
+  "topics": ["TypeScript", "JavaScript"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

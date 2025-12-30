@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "SQLBolt",
+  "url": "https://sqlbolt.com/",
+  "type": "tutorial",
+  "description": "実践的に、段階的にSQLの勉強ができるサイト。ブラウザだけですぐに始められ、面倒な環境設定なし。サイトのデザインも良い。",
+  "topics": ["SQL", "Database"],
+  "style": "interactive",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

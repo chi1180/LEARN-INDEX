@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Apple Swift Videos",
+  "url": "https://developer.apple.com/videos/swift/",
+  "type": "tutorial",
+  "description": "Appleが提供するSwiftについての動画コンテンツ。英語ですが、実際の開発者の話を聞きながら学習でき、モチベーション維持にも効果的です。",
+  "topics": ["Swift", "iOS", "macOS", "Apple Development"],
+  "style": "video",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

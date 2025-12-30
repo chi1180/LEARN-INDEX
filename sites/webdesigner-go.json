@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Webデザイナー Go コーディング練習",
+  "url": "https://webdesigner-go.com/coding-practice/",
+  "type": "learning",
+  "description": "CSS、HTMLなどのスキルチェック用サイト。与えられた素材で指定の構成・デザインのサイトを作成する。レベル別でサイトが用意されており、自分のレベルがどの程度かがわかる。",
+  "topics": ["HTML", "CSS", "Web Design"],
+  "style": "project-based",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

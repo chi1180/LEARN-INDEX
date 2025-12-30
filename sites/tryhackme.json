@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "TryHackMe",
+  "url": "https://tryhackme.com/",
+  "type": "learning",
+  "description": "Hackingの学習サイトとして有名。一部有料な学習プロジェクトもあるが、基本的には無料で、専門的なセキュリティ知識をわかりやすく学習できる。",
+  "topics": ["Cybersecurity", "Hacking", "Penetration Testing", "Linux", "Networking"],
+  "style": "interactive",
+  "pricing": "freemium",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

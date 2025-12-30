@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "freeCodeCamp",
+  "url": "https://www.freecodecamp.org/",
+  "type": "learning",
+  "description": "無料でプログラミングの習得のためのプロジェクトを複数取り組むことが出来、無料で認定証の取得が可能。日本語対応。GoogleやApple、Amazonなどの大手に就職された方もいる。",
+  "topics": ["Web Development", "JavaScript", "Python", "Data Science", "Machine Learning"],
+  "style": "interactive",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

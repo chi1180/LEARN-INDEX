@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Java Code",
+  "url": "https://java-code.jp/",
+  "type": "tutorial",
+  "description": "Javaの学習サイト。項目が細かく分かれているので、一つ一つの内容をしっかりと抑えながら学習を進めることができます。",
+  "topics": ["Java"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

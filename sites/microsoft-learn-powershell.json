@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Microsoft Learn PowerShell",
+  "url": "https://learn.microsoft.com/ja-jp/training/paths/powershell/",
+  "type": "course",
+  "description": "MicrosoftLearnのPowerShell学習コース。シェルスクリプトの書き方や業務効率化のための手法を習得できる。",
+  "topics": ["PowerShell", "Shell Script", "Windows", "Automation"],
+  "style": "interactive",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

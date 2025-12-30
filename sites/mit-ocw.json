@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/",
+  "type": "course",
+  "description": "マサチューセッツ工科大学（MIT）のOCW。Pythonの講義動画やコンピューターシステム工学についての学習プロジェクトをはじめ、MITの講義がすべて無料で受けられる。",
+  "topics": ["Computer Science", "Python", "Engineering", "Mathematics", "Physics"],
+  "style": "video",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

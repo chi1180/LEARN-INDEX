@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "A Tour of Go (日本語版)",
+  "url": "https://go-tour-jp.appspot.com/welcome/1",
+  "type": "tutorial",
+  "description": "Goを習得するためのインタラクティブなチュートリアル。与えられた知識で課題をこなしながら学習を進めることができ、確実に知識が身に付きます。",
+  "topics": ["Go", "Programming"],
+  "style": "interactive",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

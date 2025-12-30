@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "AtCoder Problems",
+  "url": "https://kenkoooo.com/atcoder/",
+  "type": "learning",
+  "description": "AtCoderの過去のコンテストの問題にチャレンジできるサイト。コンテスト以外でも問題を解きまくり腕を上げていくことができる。",
+  "topics": ["Competitive Programming", "Algorithm", "Data Structure"],
+  "style": "interactive",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

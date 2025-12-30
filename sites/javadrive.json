@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "JavaDrive",
+  "url": "https://www.javadrive.jp/",
+  "type": "tutorial",
+  "description": "幅広いプログラミング知識を日本語で学べるサイト。実際の開発に役立つ知識も含まれており、すぐに実践できる内容が充実しています。",
+  "topics": ["Java", "JavaScript", "Python", "PHP", "SQL", "HTML", "CSS"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Node.js 日本公式サイト",
+  "url": "https://nodejs.org/ja",
+  "type": "documentation",
+  "description": "Node.jsの日本公式サイト。ドキュメント、ガイド、API リファレンスなど、Node.js開発に必要な情報が日本語で提供されている。",
+  "topics": ["Node.js", "JavaScript", "Backend"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

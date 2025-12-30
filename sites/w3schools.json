@@ -1,0 +1,16 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "W3Schools",
+  "url": "https://www.w3schools.com/",
+  "type": "tutorial",
+  "description": "アカウントを作成すれば、HTML、CSS、JavaScript、TypeScript、Python、Go、C言語などのプログラミング言語やNode.js、React、Gitなどのフレームワークについて学べるチュートリアルサイト。すべて完全無料。",
+  "topics": ["HTML", "CSS", "JavaScript", "TypeScript", "Python", "Go", "C", "Node.js", "React", "Git"],
+  "style": "interactive",
+  "pricing": "free",
+  "links": {
+    "article": "https://qiita.com/chi1180/items/d945f5507f546bffa610"
+  },
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

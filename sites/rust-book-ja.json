@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "The Rust Programming Language 日本語版",
+  "url": "https://doc.rust-jp.rs/book-ja/title-page.html",
+  "type": "documentation",
+  "description": "Rustを勉強するための公式ドキュメントの日本語訳。安全性とパフォーマンスに優れたRustをゼロから学べる。ZedエディターやTauriなどで使用されている言語。",
+  "topics": ["Rust", "Systems Programming"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

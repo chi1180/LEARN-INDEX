@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "AtCoder",
+  "url": "https://atcoder.jp/",
+  "type": "learning",
+  "description": "競技プログラミングのサイト。ほぼ毎週コンテストを開催しており、世界中からコーダーが集まる。自分のコーディングレベルを把握でき、他者の能力を感じることで学習意欲が高まる。",
+  "topics": ["Competitive Programming", "Algorithm", "Data Structure"],
+  "style": "interactive",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

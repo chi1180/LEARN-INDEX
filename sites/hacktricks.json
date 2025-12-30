@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "HackTricks",
+  "url": "https://book.hacktricks.xyz/",
+  "type": "reference",
+  "description": "実用的なHackingの手法とその防御などについて学べるリソース。セキュリティに関する専門的な知識を体系的に習得できる。",
+  "topics": ["Hacking", "Security", "Penetration Testing", "CTF"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

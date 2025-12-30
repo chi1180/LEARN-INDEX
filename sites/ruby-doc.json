@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Ruby リファレンスマニュアル",
+  "url": "https://docs.ruby-lang.org/ja/3.2/doc/index.html",
+  "type": "documentation",
+  "description": "Rubyの公式リファレンスマニュアル。要点をまとめた解説で、素早くRubyを習得するのに最適。",
+  "topics": ["Ruby"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

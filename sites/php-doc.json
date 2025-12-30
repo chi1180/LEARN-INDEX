@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "PHP Manual",
+  "url": "https://www.php.net/manual/ja/index.php",
+  "type": "documentation",
+  "description": "PHPの公式ドキュメント。日本語で表記されており、始めから終わりまで書かれているので、これ一つで完結できる。",
+  "topics": ["PHP"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}

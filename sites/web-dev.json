@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "web.dev",
+  "url": "https://web.dev/learn?hl=ja",
+  "type": "course",
+  "description": "Googleが提供するWeb開発に関する知識を身に着けるための学習サイト。複数のコースをそのまま学習でき、日本語対応。サイトのデザインが学習意欲を高めてくれる。",
+  "topics": ["HTML", "CSS", "JavaScript", "Web Development", "Performance", "Accessibility"],
+  "style": "reading",
+  "pricing": "free",
+  "introducer": {
+    "github": "@chi1180"
+  }
+}
