@@ -1,0 +1,13 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Sample resource",
+  "url": "https://google.com/",
+  "type": "learning",
+  "description": "A brief description of the resource (max 300 characters)",
+  "topics": ["Topic1", "Topic2"],
+  "style": "interactive",
+  "pricing": "free",
+  "introducer": {
+    "github": "@your-username"
+  }
+}
