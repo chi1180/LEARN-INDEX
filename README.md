@@ -1,6 +1,8 @@
 # LEARN INDEX
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PR Validation](https://github.com/chi1180/LEARN-INDEX/actions/workflows/pr-validation.yml/badge.svg)](https://github.com/chi1180/LEARN-INDEX/actions/workflows/pr-validation.yml)
+[![Sync to Notion](https://github.com/chi1180/LEARN-INDEX/actions/workflows/sync-to-notion.yml/badge.svg)](https://github.com/chi1180/LEARN-INDEX/actions/workflows/sync-to-notion.yml)
 
 無料で学べるプログラミング学習リソースのキュレーションリポジトリです。
 
