@@ -1,0 +1,17 @@
+{
+  "$schema": "../src/schema.json",
+  "name": "Resource Name",
+  "url": "https://example.com/",
+  "type": "learning",
+  "description": "A brief description of the resource (max 300 characters)",
+  "topics": ["Topic1", "Topic2"],
+  "style": "interactive",
+  "pricing": "free",
+  "links": {
+    "github": "https://github.com/example/repo",
+    "documentation": "https://example.com/docs"
+  },
+  "introducer": {
+    "github": "@your-username"
+  }
+}

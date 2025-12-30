@@ -1,11 +1,12 @@
 {
-  "name": "nocostlearning",
+  "name": "learnindex",
   "module": "index.ts",
   "type": "module",
-  "private": true,
+  "private": false,
   "scripts": {
     "test": "bun run src/test.ts",
-    "sync": "bun run src/data-sync.ts"
+    "sync": "bun run src/data-sync.ts",
+    "new-site": "bun run src/new-site.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
