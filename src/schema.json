@@ -81,11 +81,13 @@
       "properties": {
         "github": {
           "type": "string",
-          "description": "GitHub username of the person who introduced this resource\ne.g., @chi1180"
+          "description": "GitHub username of the person who introduced this resource\ne.g., @chi1180",
+          "pattern": "^@.+"
         },
         "x": {
           "type": "string",
-          "description": "Twitter handle of the introducer"
+          "description": "Twitter handle of the introducer",
+          "pattern": "^@.+"
         }
       },
       "additionalProperties": false,
