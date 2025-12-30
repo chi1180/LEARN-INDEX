@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "sites/**/*.json"
+  workflow_dispatch:
 
 jobs:
   validate:

@@ -4,6 +4,8 @@
 [![PR Validation](https://github.com/chi1180/LEARN-INDEX/actions/workflows/pr-validation.yml/badge.svg)](https://github.com/chi1180/LEARN-INDEX/actions/workflows/pr-validation.yml)
 [![Sync to Notion](https://github.com/chi1180/LEARN-INDEX/actions/workflows/sync-to-notion.yml/badge.svg)](https://github.com/chi1180/LEARN-INDEX/actions/workflows/sync-to-notion.yml)
 
+Notion DB URL : https://storm-balaur-bab.notion.site/2d806429d04e80b68ea5e22b9690c5bf?v=2d806429d04e80688be2000c3d292750&source=copy_link
+
 無料で学べるプログラミング学習リソースのキュレーションリポジトリです。
 
 コミュニティからのコントリビューションを歓迎しています！あなたのおすすめの学習サイトを追加してください。
