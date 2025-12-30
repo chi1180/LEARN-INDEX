@@ -8,12 +8,13 @@
 
 コミュニティからのコントリビューションを歓迎しています！あなたのおすすめの学習サイトを追加してください。
 
+![Screenshot of LEARN INDEX](https://github.com/chi1180/LEARN-INDEX/blob/main/screenshot.png)
+
 ## 概要
 
 このプロジェクトは、無料または低コストで利用できるプログラミング学習リソースを収集し、Notion データベースに同期することで、誰もがアクセスしやすい形で情報を提供することを目的としています。
 
 Notion DB URL : https://storm-balaur-bab.notion.site/2d806429d04e80b68ea5e22b9690c5bf?v=2d806429d04e80688be2000c3d292750
-![Screenshot of LEARN INDEX](https://github.com/chi1180/LEARN-INDEX/blob/main/screenshot.png)
 
 ## コントリビューション方法
 
