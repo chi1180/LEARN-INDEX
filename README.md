@@ -4,8 +4,6 @@
 [![PR Validation](https://github.com/chi1180/LEARN-INDEX/actions/workflows/pr-validation.yml/badge.svg)](https://github.com/chi1180/LEARN-INDEX/actions/workflows/pr-validation.yml)
 [![Sync to Notion](https://github.com/chi1180/LEARN-INDEX/actions/workflows/sync-to-notion.yml/badge.svg)](https://github.com/chi1180/LEARN-INDEX/actions/workflows/sync-to-notion.yml)
 
-Notion DB URL : https://storm-balaur-bab.notion.site/2d806429d04e80b68ea5e22b9690c5bf?v=2d806429d04e80688be2000c3d292750&source=copy_link
-
 無料で学べるプログラミング学習リソースのキュレーションリポジトリです。
 
 コミュニティからのコントリビューションを歓迎しています！あなたのおすすめの学習サイトを追加してください。
@@ -13,6 +11,12 @@ Notion DB URL : https://storm-balaur-bab.notion.site/2d806429d04e80b68ea5e22b969
 ## 概要
 
 このプロジェクトは、無料または低コストで利用できるプログラミング学習リソースを収集し、Notion データベースに同期することで、誰もがアクセスしやすい形で情報を提供することを目的としています。
+
+Notion DB URL : https://storm-balaur-bab.notion.site/2d806429d04e80b68ea5e22b9690c5bf?v=2d806429d04e80688be2000c3d292750
+
+Embed Notion Database:
+
+<iframe src="https://storm-balaur-bab.notion.site/ebd//2d806429d04e80b68ea5e22b9690c5bf?v=2d806429d04e80688be2000c3d292750" width="100%" height="600" frameborder="0" allowfullscreen />
 
 ## コントリビューション方法
 
